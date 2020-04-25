@@ -51,10 +51,10 @@ function firstTimeSetup(): void {
 		addDefaultFilters();
 	});
 
-	// // set default badge background colour
-	// chrome.browserAction.setBadgeBackgroundColor({
-	// 	color: "#576ca8"
-	// })
+	// set default badge background colour
+	chrome.browserAction.setBadgeBackgroundColor({
+		color: "#576ca8"
+	})
 }
 
 // default list of blocked sites
