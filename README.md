@@ -1,6 +1,6 @@
 # reflect.
 
-## chrome dev branch
+## firefox dev branch
 
 "a mindful website blocker for the productive."
 
