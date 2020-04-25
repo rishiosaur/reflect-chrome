@@ -59,12 +59,12 @@ button {
 
 @font-face {
   font-family: "circular";
-  src: url("chrome-extension://__MSG_@@extension_id__/res/circular.ttf");
+  src: url("/res/circular.ttf");
 }
 
 @font-face {
   font-family: "circular-lt";
-  src: url("chrome-extension://__MSG_@@extension_id__/res/circular-light.ttf");
+  src: url("/res/circular-light.ttf");
 }
 
 h1, h2, h3 {
@@ -79,22 +79,22 @@ h1, h2, h3 {
 
 h1 {
 	font-weight: 300;
-	font-size: 5.5em;
+	font-size: 4.5em;
 }
 
 h2 {
 	font-weight: 200;
-	font-size: 4em;
+	font-size: 3em;
 }
 
 h3 {
 	font-weight: normal;
-	font-size: 2em;
+	font-size: 1.4em;
 }
 
 p {
 	font-family: "circular-lt" !important;
-	font-size: 1.5em;
+	font-size: 1em;
 	margin-top: 0.2em;
 }
 
@@ -168,7 +168,7 @@ input[type=number] {
 	border: 3px solid var(--shale);
 	padding: 0.5em 2em;
 	cursor: pointer;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 input[type=text] {
@@ -177,7 +177,7 @@ input[type=text] {
 	border: 3px solid var(--shale);
 	padding: 0.5em 2em;
 	cursor: pointer;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 input[type=submit] {
@@ -188,7 +188,7 @@ input[type=submit] {
 	padding: 0.5em 2em;
 	cursor: pointer;
 	font-family: "circular";
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 #linkToOptions {
@@ -207,13 +207,13 @@ input[type=submit] {
 .urlSubmit {
 	margin-left: 1.5em;
 	padding: 0.5em 1.4em !important;
-	font-size: 1.2em !important;
+	font-size: 1em !important;
 }
 
 #top-text {
 	position: fixed;
 	left: 12.5vw;
-	top: 7.5vh;
+	top: 10vh;
 	color: var(--white);
 }
 

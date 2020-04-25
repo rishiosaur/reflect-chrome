@@ -1,38 +1,46 @@
 {
-  "manifest_version": 2,
-  "name": "reflect.",
-  "description": "a mindful website blocker for the productive.",
-  "version": "1.0.1",
-  "options_page": "res/pages/options.html",
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "background": {
-    "scripts": ["src/background.js", "src/contextMenus.js", "src/util.js"],
-  	"persistent": true
-  },
-  "icons": {
-    "16": "res/icon.png",
-    "48": "res/icon.png",
-    "128": "res/icon.png"
-  },
-  "browser_action": {
-    "default_icon": "res/icon.png",
-    "icons": {
-      "16": "res/icon.png"
-    }
-  },
-  "permissions": [
-    "storage",
-    "<all_urls>",
-    "contextMenus"
-  ],
-  "content_scripts": [
-    {
-      "matches": [ "*://*/*" ],
-      "js": ["jquery-3.4.1.min.js","jquery-ui.min.js", "src/content.js"],
-      "run_at": "document_start"
-    }
-  ],
-  "web_accessible_resources": [
-    "res/*"
-  ]
+	"manifest_version": 2,
+	"name": "reflect.",
+	"description": "a mindful website blocker for the productive.",
+	"version": "1.0.1",
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"background": {
+		"scripts": ["src/background.js", "src/contextMenus.js", "src/util.js"],
+		"persistent": true
+	},
+	"icons": {
+		"16": "res/icon.png",
+		"48": "res/icon.png",
+		"128": "res/icon.png"
+	},
+	"browser_action": {
+		"default_icon": "res/icon.png"
+	},
+	"permissions": [
+		"storage",
+		"<all_urls>",
+		"contextMenus",
+		"tabs"
+	],
+	"options_ui": {
+		"page": "res/pages/options.html",
+		"open_in_tab": true,
+		"browser_style": false
+	},
+	"content_scripts": [
+		{
+			"matches": [ "*://*/*" ],
+			"js": ["jquery-3.4.1.min.js","jquery-ui.min.js", "src/content.js"],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		"res/*"
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "hi@getreflect.app",
+			"strict_min_version": "42.0"
+		}
+	}
 }

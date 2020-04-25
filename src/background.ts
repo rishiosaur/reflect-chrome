@@ -51,10 +51,10 @@ function firstTimeSetup(): void {
 		addDefaultFilters();
 	});
 
-	// set default badge background colour
-	chrome.browserAction.setBadgeBackgroundColor({
-		color: "#576ca8"
-	})
+	// // set default badge background colour
+	// chrome.browserAction.setBadgeBackgroundColor({
+	// 	color: "#576ca8"
+	// })
 }
 
 // default list of blocked sites
@@ -149,6 +149,7 @@ chrome.runtime.onConnect.addListener((port) => {
 				if (valid) {
 					// add whitelist period for site
 					chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+						console.log(tabs)
 						const urls: string[] = tabs.map(x => x.url);
 						const domain: string = cleanDomain(urls)
 						addUrlToWhitelistedSites(domain, WHITELIST_PERIOD);

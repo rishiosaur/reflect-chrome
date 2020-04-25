@@ -14,7 +14,8 @@
   "scripts": {
     "copy": "cp build/content.js dist/src/ && cp build/contextMenus.js dist/src/ && cp build/options.js dist/src/ && cp build/util.js dist/src/",
     "parcel": "parcel build build/background.js -d dist/src/ -o background && parcel build build/nn.js -d dist/src/ -o nn",
-    "build": "tsc && npm run parcel && npm run copy"
+    "build": "tsc && npm run parcel && npm run copy",
+    "ff-build": "npm run build && web-ext run -s dist"
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
