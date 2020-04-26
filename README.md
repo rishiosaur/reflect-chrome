@@ -50,8 +50,8 @@ A brief overview of the file structure in the repository,
 ## Building the project
 
 1. Ensure you have [TypeScript](https://www.typescriptlang.org/) installed.
-2. Then, install the `node` package dependencies by doing `npm i`.
-3. Finally, `npm run build`.
+2. Then, install the `node` package dependencies by doing `npm i`. When developing, ensure `npm > 6.9.0` and `node > 10.16.3`.
+3. Finally, `npm run build`. The resulting files should be in `dist`.
 
 ## Git Workflow
 

@@ -4,6 +4,10 @@
 	--blue: #8b9ac0;
 }
 
+html {
+	all: unset !important;
+}
+
 table {
 	width: 75%;
 }

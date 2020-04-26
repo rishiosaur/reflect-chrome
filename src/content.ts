@@ -63,6 +63,7 @@ function loadBlockPage(): void {
 	// get prompt page content
 	$.get(chrome.runtime.getURL("res/pages/prompt.html"), (page) => {
 		// refresh page with our blocker page
+		window.stop()
         $('html').html(page);
 
 	    addFormListener();
